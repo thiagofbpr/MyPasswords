@@ -1,0 +1,29 @@
+@import 'MFXColors.css';
+
+.bg-green {
+    -fx-background-image: url("../images/bg-green.png");
+    -fx-height: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+.bg-gray {
+    -fx-background-color: -my-light-gray;
+}
+.bg-popup-alpha {
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+.bg-round-white-with-shadow {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 5, 5);
+}
+.bg-round-white {
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+}
+.bg-nav-bar {
+    -fx-background-color: -my-green;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 3);
+}
+

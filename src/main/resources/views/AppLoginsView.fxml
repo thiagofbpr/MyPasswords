@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="500.0" style="-fx-background-color: white;" stylesheets="@../css/Labels.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane style="-fx-border-color: #eff1f3; -fx-border-width: 0 0 1 0;">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <HBox fx:id="HBox_appLoginsAllBtn" alignment="CENTER_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: white;">
+               <children>
+                  <Label alignment="CENTER" onMouseClicked="#newAppLogin" prefWidth="90.0" styleClass="btn-list-toolbar" stylesheets="@../css/Buttons.css" text="New">
+                     <graphic>
+                        <FontAwesomeIcon fill="#4a4646" glyphName="PLUS" selectionEnd="1" selectionFill="BLACK" selectionStart="1" size="1.1em" />
+                     </graphic>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="35.0" layoutY="25.0" onMouseClicked="#showOrHideAllPasswords" prefWidth="90.0" styleClass="btn-list-toolbar" stylesheets="@../css/Buttons.css" text="Show all">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIcon fill="#4a4646" glyphName="EYE" selectionEnd="1" selectionFill="BLACK" selectionStart="1" size="1.2em" />
+                     </graphic>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="HBox_AppLoginsNewBtnOnly" alignment="CENTER_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: white;" StackPane.alignment="CENTER_RIGHT">
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <children>
+                  <Label alignment="CENTER" onMouseClicked="#newAppLogin" prefWidth="90.0" styleClass="btn-list-toolbar" stylesheets="@../css/Buttons.css" text="New">
+                     <graphic>
+                        <FontAwesomeIcon fill="#4a4646" glyphName="PLUS" selectionEnd="1" selectionFill="BLACK" selectionStart="1" size="1.1em" />
+                     </graphic>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
+               </padding>
+            </HBox>
+         </children>
+      </StackPane>
+      <Label id="validationLabel" fx:id="lbl_validationView" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="460.0" visible="false" wrapText="true">
+         <graphic>
+            <FontAwesomeIcon fill="#ef6e6b" glyphName="MINUS_CIRCLE" size="1.5em" />
+         </graphic>
+         <VBox.margin>
+            <Insets top="1.0" />
+         </VBox.margin>
+      </Label>
+      <StackPane>
+         <VBox.margin>
+            <Insets top="1.0" />
+         </VBox.margin>
+         <children>
+            <VBox fx:id="VBox_AppLogins" alignment="TOP_CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="400.0" style="-fx-background-color: white;">
+               <StackPane.margin>
+                  <Insets top="1.0" />
+               </StackPane.margin>
+               <children>
+                  <TableView fx:id="table_appLogins" styleClass="table-view-applogins" stylesheets="@../css/TableViewAppLogins.css" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="col_status" prefWidth="75.0" styleClass="statusColumn" />
+                        <TableColumn fx:id="col_username" prefWidth="75.0" text="Username" />
+                        <TableColumn fx:id="col_copyUsername" prefWidth="75.0" text="Username" />
+                        <TableColumn fx:id="col_password" prefWidth="75.0" text="Password" />
+                        <TableColumn fx:id="col_actions" prefWidth="75.0" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="40.0" top="8.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+               <padding>
+                  <Insets bottom="50.0" left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="VBox_EmptyAppLogins" alignment="CENTER" style="-fx-background-color: white;" StackPane.alignment="TOP_CENTER">
+               <children>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/empty-box.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-weight: bold;" text="This application does not have any password yet." textFill="#425348">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="129.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

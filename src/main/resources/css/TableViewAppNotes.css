@@ -1,0 +1,77 @@
+@import 'MFXColors.css';
+
+.table-view.table-view-appNotes .column-header,
+.table-view.table-view-appNotes .column-header-background,
+.table-view.table-view-appNotes .column-header-background .filler {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+}
+.table-view.table-view-appNotes {
+	-fx-border-width: 0;
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+  	-fx-padding: 0;
+}
+.table-view.table-view-appNotes .table-row-cell .text,
+.table-view.table-view-appNotes .table-row-cell:selected .text {
+       -fx-fill: -my-dark-gray;
+}
+.table-view.table-view-appNotes .table-row-cell,
+.table-view.table-view-appNotes .table-row-cell:hover {
+	-fx-table-cell-border-color: transparent;
+	-fx-border-color: white;
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+	-fx-cell-size: 60;
+}
+.table-view.table-view-appNotes .table-row-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+ }
+.table-view.table-view-appNotes .table-row-cell:empty:hover {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-cursor: pointer;
+ }
+.table-view.table-view-appNotes .scroll-bar * {
+    -fx-min-width: 6px;
+    -fx-pref-width: 6px;
+    -fx-max-width: 6px;
+
+    -fx-min-height: 6px;
+    -fx-pref-height: 6px;
+    -fx-max-height: 6px;
+
+    -fx-background-color: -my-light-green;
+}
+.table-view.table-view-appNotes *.scroll-bar *.increment-button,
+.table-view.table-view-appNotes *.scroll-bar *.decrement-button {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+.table-view.table-view-appNotes *.scroll-bar *.increment-arrow,
+.table-view.table-view-appNotes *.scroll-bar *.decrement-arrow {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+.table-view.table-view-appNotes *.scroll-bar *.track {
+    -fx-background-color: white;
+}
+.note {
+    -fx-background-image: url("../images/post-it.png");
+    -fx-height: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}

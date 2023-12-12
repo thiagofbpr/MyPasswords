@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox fx:id="mainFrame" alignment="CENTER" prefHeight="700.0" prefWidth="800.0" styleClass="bg-green" stylesheets="@../css/Backgrounds.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" />

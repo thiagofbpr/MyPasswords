@@ -1,0 +1,78 @@
+@import 'MFXColors.css';
+
+.table-view.table-view-applogins .column-header,
+.table-view.table-view-applogins .column-header-background,
+.table-view.table-view-applogins .column-header-background .filler {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+}
+.table-view.table-view-applogins {
+	-fx-border-width: 0;
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+  	-fx-padding: 0;
+}
+.table-view.table-view-applogins .table-row-cell .text,
+.table-view.table-view-applogins .table-row-cell:selected .text {
+       -fx-fill: -my-dark-gray;
+}
+.table-view.table-view-applogins .table-row-cell {
+	-fx-table-cell-border-color: transparent;
+    -fx-background-color: -my-light-gray;
+    -fx-background-radius: 60;
+	-fx-cell-size: 60px;
+	-fx-background-insets: 4 4 4 0;
+}
+.table-view.table-view-applogins .table-row-cell:hover {
+    -fx-background-color: #e0e2e3;
+}
+.table-view.table-view-applogins .table-row-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+ }
+.table-view.table-view-applogins .table-row-cell:empty:hover {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-cursor: pointer;
+ }
+.table-view.table-view-applogins .scroll-bar * {
+    -fx-min-width: 6px;
+    -fx-pref-width: 6px;
+    -fx-max-width: 6px;
+
+    -fx-min-height: 6px;
+    -fx-pref-height: 6px;
+    -fx-max-height: 6px;
+
+    -fx-background-color: -my-light-green;
+ }
+.table-view.table-view-applogins *.scroll-bar *.increment-button,
+.table-view.table-view-applogins *.scroll-bar *.decrement-button {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+.table-view.table-view-applogins *.scroll-bar *.increment-arrow,
+.table-view.table-view-applogins *.scroll-bar *.decrement-arrow {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+.table-view.table-view-applogins *.scroll-bar *.track {
+    -fx-background-color: white;
+}
+.statusColumn .label {
+    -fx-alignment: CENTER_RIGHT;
+    -fx-text-fill: -my-dark-gray;
+    -fx-font-size: 10px;
+}

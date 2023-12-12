@@ -1,0 +1,21 @@
+@import 'MFXColors.css';
+
+.root {
+    -icons-color: -my-dark-green;
+}
+.clickable-icon {
+    -fx-fill: -my-dark-green;
+}
+.clickable-icon:hover {
+    -fx-fill: -my-medium-green;
+}
+.gray-icon {
+    -fx-fill: -my-dark-gray;
+}
+.gray-icon:hover {
+    -fx-fill: -my-medium-gray;
+}
+.light-gray-icon {
+    -fx-fill: #eee;
+}
+

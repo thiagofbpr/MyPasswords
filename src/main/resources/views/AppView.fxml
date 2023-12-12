@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox stylesheets="@../css/Labels.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="HBox_App" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="534.0" VBox.vgrow="NEVER">
+         <children>
+            <FontAwesomeIcon glyphName="ARROW_LEFT" onMouseClicked="#back" size="1.8em" styleClass="clickable-icon">
+               <HBox.margin>
+                  <Insets right="15.0" top="32.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <VBox alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="500.0" styleClass="bg-gray" stylesheets="@../css/Backgrounds.css">
+               <children>
+                  <Label id="validationLabel" fx:id="lbl_validationView" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="460.0" visible="false" wrapText="true">
+                     <graphic>
+                        <FontAwesomeIcon fill="#ef6e6b" glyphName="MINUS_CIRCLE" size="1.5em" />
+                     </graphic>
+                  </Label>
+                  <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" style="-fx-border-color: ccc; -fx-border-width: 1; -fx-border-radius: 30;">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <ImageView fx:id="img_appLogo" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icon-app-default.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets top="2.5" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <StackPane>
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="3.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <VBox fx:id="VBox_AppNameOnly" alignment="CENTER_LEFT" style="-fx-background-color: eff1f3;">
+                                       <children>
+                                          <Label fx:id="lbl_appNameOnly" styleClass="normal-green-bold-label" stylesheets="@../css/Labels.css" text="Label" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="VBox_AppNameAndUrl" alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="340.0" style="-fx-background-color: eff1f3;">
+                                       <children>
+                                          <Label fx:id="lbl_appName" styleClass="normal-green-bold-label" stylesheets="@../css/Labels.css" text="Label" />
+                                          <Label fx:id="lbl_appWebsite" onMouseClicked="#browserAppWebsite" styleClass="link-button" stylesheets="@../css/Buttons.css" text="Label" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <HBox AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="12.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="EDIT" onMouseClicked="#editApp" size="1.8em" styleClass="clickable-icon">
+                                 <HBox.margin>
+                                    <Insets top="2.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                              <FontAwesomeIcon glyphName="TRASH" onMouseClicked="#deleteApp" size="1.8em" styleClass="clickable-icon">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="1.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </AnchorPane>
+                  <TabPane stylesheets="@../css/TabPane.css" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                     <tabs>
+                        <Tab text="Passwords">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox fx:id="appLoginsFrame" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Questions">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox fx:id="appQuestionsFrame" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Notes">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox fx:id="appNotesFrame" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </TabPane>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets top="2.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

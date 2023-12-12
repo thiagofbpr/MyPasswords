@@ -1,0 +1,68 @@
+@import 'MFXColors.css';
+@import 'fonts.css';
+
+Label {
+    -fx-font-family: Arial, sans-serif;
+}
+
+.title {
+    -fx-font-family: "Roboto Bk";
+    -fx-font-size: 26;
+    -fx-text-fill: -my-dark-green;
+    -fx-padding: 0 0 0 0;
+    -fx-margin: 0 0 0 10;
+}
+
+.normal-black-label {
+    -fx-text-fill: -my-dark-gray;
+    -fx-font-size: 14;
+}
+.normal-black-bold-label {
+    -fx-text-fill: -my-dark-gray;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+.normal-white-bold-label {
+     -fx-text-fill: white;
+     -fx-font-size: 14;
+     -fx-font-weight: bold;
+ }
+ .small-white-label {
+     -fx-text-fill: white;
+     -fx-font-size: 11;
+ }
+ .normal-green-bold-label {
+     -fx-text-fill: -my-dark-green;
+     -fx-font-size: 14;
+     -fx-font-weight: bold;
+ }
+  .normal-green-label {
+      -fx-text-fill: -my-dark-green;
+      -fx-font-size: 14;
+  }
+ .small-green-label {
+     -fx-text-fill: -my-dark-green;
+     -fx-font-size: 11;
+ }
+#validationLabel {
+    -fx-text-fill: -mfx-red;
+    -fx-font-family: Arial, sans-serif;
+    -fx-font-size: 11;
+}
+.info {
+    -fx-border-color: ccc;
+    -fx-border-radius: 100;
+    -fx-fill: ccc;
+}
+.info .glyph-icon {
+    -fx-fill: ccc;
+}
+.info:hover {
+    -fx-border-color: -my-medium-gray;
+}
+.info:hover .glyph-icon {
+    -fx-fill: -my-medium-gray;
+}
+
+
+

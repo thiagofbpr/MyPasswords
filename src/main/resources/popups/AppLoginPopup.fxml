@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyPressedHandler" prefHeight="768.0" prefWidth="1024.0" styleClass="bg-popup-alpha" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_CENTER" focusTraversable="true" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="355.0" styleClass="bg-round-white-with-shadow">
+         <children>
+            <Label id="validationLabel" fx:id="lbl_validationView" alignment="CENTER" prefWidth="383.0" visible="false" wrapText="true">
+               <graphic>
+                  <FontAwesomeIcon fill="#ef6e6b" glyphName="MINUS_CIRCLE" size="1.5em" />
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="txt_title1" layoutX="179.0" layoutY="67.0" styleClass="title" stylesheets="@../css/Labels.css">
+               <graphic>
+                  <FontAwesomeIcon glyphName="LOCK" size="3em" styleClass="light-gray-icon" />
+               </graphic>
+            </Label>
+            <Label fx:id="txt_title" styleClass="title" stylesheets="@../css/Labels.css" visible="false">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <MFXTextField id="validatedField" fx:id="txt_username" borderGap="30.0" floatMode="BORDER" floatingText="Username" onAction="#save" prefWidth="250.0" stylesheets="@../css/TextFields.css">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="lbl_validationUsername" minWidth="-Infinity" prefHeight="14.0" prefWidth="215.0" stylesheets="@../css/TextFields.css" text="Label" visible="false" wrapText="true">
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Label>
+            <MFXPasswordField id="validatedField" fx:id="txt_password" borderGap="30.0" floatMode="BORDER" floatingText="Password" onAction="#save" prefWidth="250.0" stylesheets="@../css/TextFields.css">
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </MFXPasswordField>
+            <Label id="validationLabel" fx:id="lbl_validationPassword" minWidth="-Infinity" prefHeight="14.0" prefWidth="215.0" stylesheets="@../css/TextFields.css" text="Label" visible="false" wrapText="true">
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER">
+               <children>
+                  <MFXButton maxWidth="-Infinity" minWidth="-Infinity" onAction="#cancel" prefWidth="100.0" styleClass="outline-button-gray" stylesheets="@../css/Buttons.css" text="Cancel" />
+                  <MFXButton layoutX="125.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#save" prefWidth="143.0" styleClass="outline-button" stylesheets="@../css/Buttons.css" text="Save">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </MFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="60.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <stylesheets>
+            <URL value="@../css/Backgrounds.css" />
+            <URL value="@../css/Icons.css" />
+         </stylesheets>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../css/Backgrounds.css" />
+      <URL value="@../css/TextFields.css" />
+      <URL value="@../css/Labels.css" />
+   </stylesheets>
+</VBox>

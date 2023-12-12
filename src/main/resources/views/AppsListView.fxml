@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="VBox_appsList" alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="390.0" styleClass="bg-gray" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label id="validationLabel" fx:id="lbl_validationView" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="352.0" visible="false" wrapText="true">
+         <graphic>
+            <FontAwesomeIcon fill="#ef6e6b" glyphName="MINUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </Label>
+      <StackPane VBox.vgrow="ALWAYS">
+         <children>
+            <VBox fx:id="VBox_Empty" alignment="CENTER" styleClass="bg-gray" stylesheets="@../css/Backgrounds.css">
+               <children>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/empty-box.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-weight: bold;" text="You don't have any applications yet." textFill="#425348">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="55.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="VBox_Search" alignment="TOP_CENTER" styleClass="bg-gray" stylesheets="@../css/Backgrounds.css">
+               <children>
+                  <MFXTextField id="customSearchField" fx:id="txt_search" borderGap="30.0" floatMode="BORDER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="370.0" promptText="Search" stylesheets="@../css/TextFields.css">
+                     <VBox.margin>
+                        <Insets top="1.0" />
+                     </VBox.margin>
+                     <textFill>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.8700000047683716" />
+                     </textFill>
+                  </MFXTextField>
+                  <TableView fx:id="table_apps" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="370.0" styleClass="table-view-apps" stylesheets="@../css/TableViewApps.css" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="col_appLogo" prefWidth="75.0" text="C1" />
+                        <TableColumn fx:id="col_appName" prefWidth="75.0" text="C2" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <padding>
+                  <Insets bottom="40.0" />
+               </padding>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </StackPane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/Backgrounds.css" />
+      <URL value="@../css/Labels.css" />
+   </stylesheets>
+   <padding>
+      <Insets left="20.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="VBoxApplication" alignment="TOP_CENTER" focusTraversable="true" prefHeight="700.0" prefWidth="1024.0" styleClass="bg-gray" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane focusTraversable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="55.0" styleClass="bg-nav-bar">
+         <children>
+            <ImageView pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@../images/logo-small.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="3.0">
+               <children>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icon-user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label fx:id="lbl_user" styleClass="normal-green-bold-label" stylesheets="@../css/Labels.css" text="User full name" />
+                        <HBox>
+                           <children>
+                              <Label fx:id="lbl_lastConnection" styleClass="small-green-label" stylesheets="@../css/Labels.css" text="Last connection on" textFill="#4a4848">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <FontAwesomeIcon fill="#4a4848" glyphName="COG" layoutX="10.0" layoutY="72.0" onMouseClicked="#showConfigView" size="1.8em" styleClass="clickable-icon">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <FontAwesomeIcon fx:id="btn_logout" fill="#4a4848" glyphName="SIGN_OUT" layoutX="217.0" layoutY="72.0" onMouseClicked="#logout" size="1.8em" styleClass="clickable-icon">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </AnchorPane>
+      <Label id="validationLabel" fx:id="lbl_validationView" alignment="CENTER" prefWidth="600.0" visible="false" wrapText="true">
+         <graphic>
+            <FontAwesomeIcon fill="#ef6e6b" glyphName="MINUS_CIRCLE" size="1.5em" />
+         </graphic>
+         <VBox.margin>
+            <Insets left="130.0" top="25.0" />
+         </VBox.margin>
+      </Label>
+      <HBox VBox.vgrow="ALWAYS">
+         <children>
+            <VBox>
+               <HBox.margin>
+                  <Insets top="19.0" />
+               </HBox.margin>
+               <children>
+                  <MFXButton maxWidth="-Infinity" minWidth="-Infinity" onAction="#newApp" prefHeight="40.0" prefWidth="109.0" styleClass="outline-button" stylesheets="@../css/Buttons.css" text=" New app">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PLUS" selectionEnd="1" selectionStart="1" size="1.5em" />
+                     </graphic>
+                  </MFXButton>
+                  <AnchorPane VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfoPopup" prefHeight="50.0" prefWidth="50.0" styleClass="info" stylesheets="@../css/Labels.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0">
+                           <graphic>
+                              <FontAwesomeIcon fill="#cccccc" glyphName="INFO" size="2.5em" styleClass="infoIcon" />
+                           </graphic>
+                           <padding>
+                              <Insets left="19.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets right="130.0" />
+               </HBox.margin>
+               <children>
+                  <VBox fx:id="secondaryFrame" alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="550.0" HBox.hgrow="NEVER" />
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="60.0" left="30.0" right="30.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@../css/Backgrounds.css" />
+      <URL value="@../css/Icons.css" />
+      <URL value="@../css/Labels.css" />
+   </stylesheets>
+</VBox>

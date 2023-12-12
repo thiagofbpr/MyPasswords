@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox stylesheets="@../css/Labels.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="TOP_CENTER" prefWidth="534.0">
+         <children>
+            <FontAwesomeIcon glyphName="ARROW_LEFT" size="1.8em" styleClass="clickable-icon" visible="false">
+               <HBox.margin>
+                  <Insets top="12.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <VBox alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="500.0" styleClass="bg-gray" stylesheets="@../css/Backgrounds.css">
+               <children>
+                  <VBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label id="validationLabel" fx:id="lbl_validationView" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="255.0" visible="false" wrapText="true">
+                           <graphic>
+                              <FontAwesomeIcon fill="#ef6e6b" glyphName="MINUS_CIRCLE" size="1.5em" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label styleClass="title" stylesheets="@../css/Labels.css" text="Confirmation" />
+                        <Label fx:id="deleteAccountTextConfirmation" prefHeight="76.0" prefWidth="250.0" text="Your account and all your apps/passwords will be permanently deleted, there is no going back. Please be certain. To continue, enter your password and click Delete user account." textAlignment="JUSTIFY" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <MFXPasswordField id="validatedField" fx:id="txt_password" borderGap="30.0" floatMode="BORDER" floatingText="Password" onAction="#delete" prefWidth="250.0" stylesheets="@../css/TextFields.css">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </MFXPasswordField>
+                        <Label id="validationLabel" fx:id="lbl_ValidationPassword" minWidth="-Infinity" prefWidth="200.0" textFill="#eb0707" visible="false" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="2.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Arial" size="9.0" />
+                           </font>
+                        </Label>
+                        <MFXButton maxWidth="-Infinity" minWidth="-Infinity" onAction="#delete" prefWidth="250.0" styleClass="outline-button-red" stylesheets="@../css/Buttons.css" text="Delete user account">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </MFXButton>
+                        <MFXButton layoutX="60.0" layoutY="249.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#cancel" prefWidth="250.0" styleClass="outline-button-gray" stylesheets="@../css/Buttons.css" text="Cancel">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </MFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="47.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="40.0" left="40.0" right="40.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
